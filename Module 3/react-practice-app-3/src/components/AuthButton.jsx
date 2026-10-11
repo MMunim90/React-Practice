@@ -6,7 +6,7 @@ const AuthButton = () => {
 
   if (authUser) {
     return <div>
-        <p>Welcome {authUser.name}</p>
+        {/* <p>Welcome {authUser.name}</p> */}
         <button onClick={logout}>Logout</button>
     </div>;
   }
