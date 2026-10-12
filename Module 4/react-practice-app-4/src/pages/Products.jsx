@@ -1,5 +1,6 @@
 import React from "react";
 import useFetch from "../hooks/useFetch";
+import ProductCard from "../components/ProductCard";
 
 const Products = () => {
   const { products, loading, err } = useFetch();
@@ -20,15 +21,7 @@ const Products = () => {
       }}
     >
       {products.map((product, index) => (
-        <div
-          key={index}
-          style={{ color: "green", border: "2px solid black", padding: "20px" }}
-        >
-          <img style={{ width: "100%" }} src={product.image} alt="" />
-          <p>
-            {product.title} = {product.price} $
-          </p>
-        </div>
+        <ProductCard product={product} key={index}/>
       ))}
     </div>
   );
