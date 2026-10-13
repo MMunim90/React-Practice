@@ -3,6 +3,7 @@ import Root from "../layouts/Root";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Products from "../pages/Products";
+import ProductsDetails from "../pages/ProductsDetails";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
         {
             path: '/products',
             element: <Products/>
+        },
+        {
+            path: '/products/:id',
+            element: <ProductsDetails/>
         },
     ]
   },
