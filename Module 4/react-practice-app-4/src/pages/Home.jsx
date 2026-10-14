@@ -34,7 +34,7 @@ const Home = () => {
         ))}
       </div>
 
-      <Link to={'/products'} style={{textAlign: 'center', margin: 'auto', display: 'block', marginTop: '20px', color: 'blue', textDecoration: 'underline'}}>See all products</Link>
+      <Link to={'/products'} style={{textAlign: 'center', margin: 'auto', display: 'block', marginTop: '20px', marginBottom: '20px', textDecoration: 'underline', fontSize: '25px'}}>See all products</Link>
     </div>
   );
 };
