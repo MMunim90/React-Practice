@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import useFetch from "../hooks/useFetch";
 import ProductCard from "../components/ProductCard";
+import Banner from "../components/Banner";
 
 const Home = () => {
   const { products, loading, err } = useFetch();
@@ -22,6 +23,8 @@ const Home = () => {
 
   return (
     <div>
+      <Banner/>
+      <h1 className="text-4xl font-bold my-6 text-center">Products</h1>
       <div
         style={{
           display: "grid",

@@ -13,10 +13,10 @@ const ProductsDetails = () => {
     console.log(singleProduct)
 
     return (
-        <div>
-            <p>Product Details</p>
-            <img src={singleProduct?.image} alt="" />
-            <p>{singleProduct?.title}</p>
+        <div className='m-10'>
+            <p className='text-center my-10 text-2xl font-bold'>Product Details</p>
+            <img className='m-auto' src={singleProduct?.image} alt="" />
+            <p className='my-4 text-2xl font-bold text-center'>{singleProduct?.title} ({singleProduct?.category})</p>
             <p>{singleProduct?.description}</p>
         </div>
     );
