@@ -5,6 +5,7 @@ import About from "../pages/About";
 import Products from "../pages/Products";
 import ProductsDetails from "../pages/ProductsDetails";
 import Login from "../pages/Login";
+import ProtectedRoutes from "./ProtectedRoutes";
 
 export const router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ export const router = createBrowserRouter([
         },
         {
             path: '/products/:id',
-            element: <ProductsDetails/>
+            element: <ProtectedRoutes><ProductsDetails/></ProtectedRoutes>
         },
         {
             path: '/login',

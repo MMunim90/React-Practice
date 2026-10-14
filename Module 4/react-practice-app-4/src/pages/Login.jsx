@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { AuthContext } from "../context/AuthProvider";
+import { Navigate } from "react-router";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const {authUser, login} = useContext(AuthContext);
 
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log(username, email, password);
+    // console.log(username, email, password);
+    login(username, email, password)
   };
+
+//   console.log(authUser)
 
   return (
     <form onSubmit={handleLogin}>
